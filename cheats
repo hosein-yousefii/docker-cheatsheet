@@ -23,3 +23,27 @@
 ## How to remove dangling images?
 
     docker prune
+
+## How to create image from container?
+
+    docker commit CONTAINER NEWIMG
+
+## how to store container id in a file?
+
+    docker run -d --cidfile redis redis
+
+## How to limit cpu,ram,swap and the processor?
+
+    docker container run -d --cpus 1.5 --memory 512m --cpuset-cpus 0,2 --memory-swap 512m redis
+
+## How to set variable in container?
+
+    docker run -it -e CLASS=docker -e NAME=hosein alpine env
+
+## How to mount a dir and change a working dir to it?
+
+    docker run -it --workdir /data -v /root/wwwsqldesigner:/data:ro alpine sh
+    
+    
+    
+    
