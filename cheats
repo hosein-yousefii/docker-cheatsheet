@@ -1,0 +1,25 @@
+
+## How to find volumes and ports?
+
+    docker image inspect IMAGE:TAG
+
+
+## How to save, load and import image?
+
+    docker image save -o IMG.tar IMG:TAG
+
+    docker image load -i IMG.tar                # Loads all layers again
+
+    docker image import IMG.tar IMGNEW:TAG      # Delete all configs and history, it's good for creating base image to optimize and secure images.
+
+## How to expose container port?
+
+    docker run -d -p 8081:80 nginx:latest
+   
+## How to find the process of a container?
+
+    docker top
+
+## How to remove dangling images?
+
+    docker prune
